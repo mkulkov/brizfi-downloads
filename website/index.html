@@ -13,42 +13,50 @@
   <meta property="og:image" content="https://mkulkov.github.io/brizfi-downloads/assets/app-icon-v3.png">
   <link rel="canonical" href="https://mkulkov.github.io/brizfi-downloads/">
   <link rel="icon" href="assets/app-icon-v3.png" type="image/png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=languages-1">
+  <script src="languages.js?v=1" defer></script>
 </head>
 <body>
-  <a class="skip" href="#main">К содержимому</a>
+  <a class="skip" href="#main" data-i18n="skip">К содержимому</a>
   <header class="wrap header">
-    <a class="brand" href="#" aria-label="BRIZFI — на главную"><img src="assets/app-icon-v3.png" width="44" height="44" alt="">BRIZFI</a>
-    <nav aria-label="Основная навигация"><a href="#how">Как это работает</a><a href="#download">Скачать</a></nav>
+    <a class="brand" href="#" aria-label="BRIZFI — на главную" data-i18n-aria-label="homeLabel"><img src="assets/app-icon-v3.png" width="44" height="44" alt="">BRIZFI</a>
+    <nav aria-label="Основная навигация" data-i18n-aria-label="navLabel"><a href="#how" data-i18n="navHow">Как это работает</a><a href="#download" data-i18n="navDownload">Скачать</a></nav>
+    <label class="language-picker">
+      <span class="sr-only">Язык / Language</span>
+      <select id="language" aria-label="Язык / Language">
+        <option value="ru" lang="ru">Русский</option>
+        <option value="en" lang="en">English</option>
+      </select>
+    </label>
   </header>
   <main id="main">
     <section class="wrap hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="intro">С телефона и компьютера — на ридер</p>
-        <h1 id="hero-title">Хорошим книгам<br>пора в дорогу.</h1>
-        <p class="lead">Выберите книгу, передайте на ридер и&nbsp;продолжайте читать. BRIZFI поможет доставить вашу следующую историю.</p>
+        <p class="intro" data-i18n="intro">С телефона и компьютера — на ридер</p>
+        <h1 id="hero-title" data-i18n="hero">Хорошим книгам<br>пора в дорогу.</h1>
+        <p class="lead" data-i18n="lead">Выберите книгу, передайте на ридер и&nbsp;продолжайте читать. BRIZFI поможет доставить вашу следующую историю.</p>
         <div class="actions">
-          <a class="button secondary" href="https://www.rustore.ru/catalog/app/ru.mkulkov.brizfi"><span aria-hidden="true">↓</span><span>Страница в RuStore<small>Публикация ожидается</small></span></a>
-          <a class="button primary" href="https://github.com/mkulkov/brizfi-downloads/releases/download/v0.1.0/BRIZFI-0.1.0-20261023-windows-x64.zip"><span aria-hidden="true">⊞</span><span>Скачать для Windows<small>ZIP · x64 · GitHub</small></span></a>
+          <a class="button secondary" href="https://www.rustore.ru/catalog/app/ru.mkulkov.brizfi"><span aria-hidden="true">↓</span><span data-i18n="storeHero">Страница в RuStore<small>Публикация ожидается</small></span></a>
+          <a class="button primary" href="https://github.com/mkulkov/brizfi-downloads/releases/download/v0.1.0/BRIZFI-0.1.0-20261023-windows-x64.zip"><span aria-hidden="true">⊞</span><span data-i18n="windowsHero">Скачать для Windows<small>ZIP · x64 · GitHub</small></span></a>
         </div>
-        <p class="quiet">Без регистрации. Книги передаются локально.</p><p class="quiet">Android: карточка RuStore пока недоступна.</p>
+        <p class="quiet" data-i18n="local">Без регистрации. Книги передаются локально.</p><p class="quiet" data-i18n="storePending">Android: карточка RuStore пока недоступна.</p>
       </div>
-      <div class="hero-art"><div class="art-disc"></div><img src="assets/connect.png" width="768" height="768" alt="Телефон передаёт книгу электронному ридеру"><span class="paper-note">Ваша книга.<br>Ваш ридер.<br>Ваша история.</span></div>
+      <div class="hero-art"><div class="art-disc"></div><img src="assets/connect.png" width="768" height="768" alt="Телефон передаёт книгу электронному ридеру" data-i18n-alt="connectAlt"><span class="paper-note" data-i18n="note">Ваша книга.<br>Ваш ридер.<br>Ваша история.</span></div>
     </section>
-    <div class="benefit-band"><div class="wrap benefits"><p><strong>Wi-Fi и USB</strong><span>Выберите удобное подключение</span></p><p><strong>EPUB, FB2, AZW3</strong><span>Подготовка книг для Kindle</span></p><p><strong>Без облачной пересылки</strong><span>Файлы остаются на ваших устройствах</span></p></div></div>
+    <div class="benefit-band"><div class="wrap benefits"><p><strong data-i18n="connections">Wi-Fi и USB</strong><span data-i18n="connectionHint">Выберите удобное подключение</span></p><p><strong>EPUB, FB2, AZW3</strong><span data-i18n="kindleFormats">Подготовка книг для Kindle</span></p><p><strong data-i18n="noCloud">Без облачной пересылки</strong><span data-i18n="yourDevices">Файлы остаются на ваших устройствах</span></p></div></div>
     <section id="how" class="wrap how" aria-labelledby="how-title">
-      <div class="section-heading"><h2 id="how-title">Меньше настроек.<br>Больше чтения.</h2><p>От файла до ридера — один понятный маршрут.</p></div>
-      <ol class="steps"><li><span class="step-number">1</span><h3>Подключите ридер</h3><p>По Wi-Fi: подключите устройства к общей сети, откройте адрес из BRIZFI в браузере ридера и подтвердите связь. Или выберите USB.</p></li><li><span class="step-number">2</span><h3>Выберите книги</h3><p>Добавьте файлы в приложение. EPUB и FB2 можно подготовить для Kindle, а готовый AZW3 — передать без преобразования.</p></li><li><span class="step-number">3</span><h3>Передайте и читайте</h3><p>При Wi-Fi скачайте книгу со страницы в браузере ридера. При USB отправьте её из приложения. Затем откройте книгу на ридере.</p></li></ol>
+      <div class="section-heading"><h2 id="how-title" data-i18n="howTitle">Меньше настроек.<br>Больше чтения.</h2><p data-i18n="howIntro">От файла до ридера — один понятный маршрут.</p></div>
+      <ol class="steps"><li><span class="step-number">1</span><h3 data-i18n="step1Title">Подключите ридер</h3><p data-i18n="step1">По Wi-Fi: подключите устройства к общей сети, откройте адрес из BRIZFI в браузере ридера и подтвердите связь. Или выберите USB.</p></li><li><span class="step-number">2</span><h3 data-i18n="step2Title">Выберите книги</h3><p data-i18n="step2">Добавьте файлы в приложение. EPUB и FB2 можно подготовить для Kindle, а готовый AZW3 — передать без преобразования.</p></li><li><span class="step-number">3</span><h3 data-i18n="step3Title">Передайте и читайте</h3><p data-i18n="step3">При Wi-Fi скачайте книгу со страницы в браузере ридера. При USB отправьте её из приложения. Затем откройте книгу на ридере.</p></li></ol>
     </section>
-    <section class="reading-section"><div class="wrap reading"><img src="assets/transfer.png" width="768" height="768" loading="lazy" alt="Книжная посылка летит от телефона к ридеру"><div><h2>Книги путешествуют.<br>Приватность остаётся.</h2><p>Для передачи не нужен аккаунт или загрузка книги в облако. Конвертация выполняется на вашем устройстве.</p><p>Для Wi-Fi используйте доверенную локальную сеть и держите приложение открытым до завершения передачи.</p><a class="text-link" href="#compatibility">Что нужно для подключения <span aria-hidden="true">↗</span></a></div></div></section>
-    <section id="compatibility" class="wrap compatibility" aria-labelledby="compat-title"><h2 id="compat-title">Перед первым подключением</h2><div class="faq">
-      <details><summary>Какие ридеры подходят?</summary><p>Передача и открытие тестовых книг подтверждены на Kindle Basic 2024. Для Windows также подтверждена передача EPUB по USB на NOOK. Другие модели и сочетания способов подключения требуют отдельной проверки.</p></details>
-      <details><summary>Какие форматы можно передавать?</summary><p>Для Kindle предусмотрена подготовка EPUB и FB2 в AZW3; готовый AZW3 передаётся без изменений. Для поддерживаемого NOOK используется EPUB. Возможность открытия зависит от ридера. Книги с DRM не поддерживаются.</p></details>
-      <details><summary>Как установить версию для Windows?</summary><p>Кнопка скачивания загрузит ZIP для Windows x64 с GitHub. Распакуйте его целиком. Запустите brizfi.exe из распакованной папки. Папку data и DLL нужно сохранить рядом с программой.</p></details>
-      <details><summary>Нужен ли интернет для передачи?</summary><p>Для локальной передачи интернет не требуется. Для Wi-Fi устройства должны находиться в одной сети, а браузер ридера — открывать локальную страницу. Трафик HTTP не шифруется, поэтому используйте доверенную сеть. Интернет нужен для скачивания приложения.</p></details>
+    <section class="reading-section"><div class="wrap reading"><img src="assets/transfer.png" width="768" height="768" loading="lazy" alt="Книжная посылка летит от телефона к ридеру" data-i18n-alt="transferAlt"><div><h2 data-i18n="privacyTitle">Книги путешествуют.<br>Приватность остаётся.</h2><p data-i18n="privacy">Для передачи не нужен аккаунт или загрузка книги в облако. Конвертация выполняется на вашем устройстве.</p><p data-i18n="network">Для Wi-Fi используйте доверенную локальную сеть и держите приложение открытым до завершения передачи.</p><a class="text-link" href="#compatibility" data-i18n="requirements">Что нужно для подключения <span aria-hidden="true">↗</span></a></div></div></section>
+    <section id="compatibility" class="wrap compatibility" aria-labelledby="compat-title"><h2 id="compat-title" data-i18n="compatTitle">Перед первым подключением</h2><div class="faq">
+      <details><summary data-i18n="faq1Title">Какие ридеры подходят?</summary><p data-i18n="faq1">Передача и открытие тестовых книг подтверждены на Kindle Basic 2024. Для Windows также подтверждена передача EPUB по USB на NOOK. Другие модели и сочетания способов подключения требуют отдельной проверки.</p></details>
+      <details><summary data-i18n="faq2Title">Какие форматы можно передавать?</summary><p data-i18n="faq2">Для Kindle предусмотрена подготовка EPUB и FB2 в AZW3; готовый AZW3 передаётся без изменений. Для поддерживаемого NOOK используется EPUB. Возможность открытия зависит от ридера. Книги с DRM не поддерживаются.</p></details>
+      <details><summary data-i18n="faq3Title">Как установить версию для Windows?</summary><p data-i18n="faq3">Кнопка скачивания загрузит ZIP для Windows x64 с GitHub. Распакуйте его целиком. Запустите brizfi.exe из распакованной папки. Папку data и DLL нужно сохранить рядом с программой.</p></details>
+      <details><summary data-i18n="faq4Title">Нужен ли интернет для передачи?</summary><p data-i18n="faq4">Для локальной передачи интернет не требуется. Для Wi-Fi устройства должны находиться в одной сети, а браузер ридера — открывать локальную страницу. Трафик HTTP не шифруется, поэтому используйте доверенную сеть. Интернет нужен для скачивания приложения.</p></details>
     </div></section>
-    <section id="download" class="wrap download" aria-labelledby="download-title"><div><p class="intro">Следующая глава уже ждёт</p><h2 id="download-title">Возьмите книги с собой.</h2><p>BRIZFI для Android и Windows.</p></div><div class="actions"><a class="button secondary" href="https://www.rustore.ru/catalog/app/ru.mkulkov.brizfi">Страница в RuStore</a><a class="button primary" href="https://github.com/mkulkov/brizfi-downloads/releases/download/v0.1.0/BRIZFI-0.1.0-20261023-windows-x64.zip">Windows на GitHub <span aria-hidden="true">↗</span></a></div></section>
+    <section id="download" class="wrap download" aria-labelledby="download-title"><div><p class="intro" data-i18n="downloadIntro">Следующая глава уже ждёт</p><h2 id="download-title" data-i18n="downloadTitle">Возьмите книги с собой.</h2><p data-i18n="platforms">BRIZFI для Android и Windows.</p></div><div class="actions"><a class="button secondary" href="https://www.rustore.ru/catalog/app/ru.mkulkov.brizfi" data-i18n="store">Страница в RuStore</a><a class="button primary" href="https://github.com/mkulkov/brizfi-downloads/releases/download/v0.1.0/BRIZFI-0.1.0-20261023-windows-x64.zip" data-i18n="windows">Windows на GitHub <span aria-hidden="true">↗</span></a></div></section>
   </main>
-  <footer class="wrap footer"><a class="brand" href="#">BRIZFI</a><p>Выбрал книгу. Отправил. Читай.</p><a href="https://github.com/mkulkov/brizfi-downloads/releases">Версии для Windows</a><a href="https://github.com/mkulkov/brizfi-downloads">Исходники · GPL-3.0-or-later</a></footer>
+  <footer class="wrap footer"><a class="brand" href="#">BRIZFI</a><p data-i18n="tagline">Выбрал книгу. Отправил. Читай.</p><a href="https://github.com/mkulkov/brizfi-downloads/releases" data-i18n="releases">Версии для Windows</a><a href="https://github.com/mkulkov/brizfi-downloads" data-i18n="source">Исходники · GPL-3.0-or-later</a></footer>
 </body>
 </html>
