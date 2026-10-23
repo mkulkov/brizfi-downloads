@@ -10,8 +10,8 @@
 
 Исходный снимок приложения: `ecab2f72270e7584c2673c976b139d6eebe1c4f3`.
 Собственный исполняемый код снимка соответствует Windows-сборке от 23 октября 2026 года.
-Лицензия и документация распространения добавлены после сборки. Иконки из более поздних
-локальных изменений не включены. Полная побайтовая воспроизводимость не заявляется.
+Лицензия и документация распространения добавлены после сборки. Переносимый ZIP сохраняет первоначальную иконку. Установщик использует новую иконку
+из текущего source/windows/runner/resources/app_icon.ico и app-local CRT Visual C++. Полная побайтовая воспроизводимость не заявляется.
 
 ## Обычная сборка
 
@@ -55,3 +55,22 @@ flutter build windows --release
 Копируйте весь Release в чистую папку, добавьте LICENSE, README.txt, THIRD_PARTY_NOTICES.md
 и THIRD_PARTY_LICENSES, затем создайте ZIP. Не включайте книги, ключи, локальные пути SDK,
 кэши сборки или приватные документы. SHA-256 опубликованных архивов находится в SHA256SUMS.txt.
+
+## Windows installer update, 23 October 2026
+
+`BRIZFI-0.1.0-windows-installer-sources.zip` is a source overlay for the original
+`BRIZFI-0.1.0-20261023-sources.zip`: extract it into the same root, replacing the
+Windows icon and adding the installer definitions and icon master. All application
+logic and dependency lockfiles remain the same. The current repository source/
+already contains these files. The portable binary ZIP is unchanged.
+
+After rebuilding Flutter Windows, install Inno Setup 6.7.3 and run from source/:
+
+```powershell
+./packaging/windows/build-installer.ps1 -NoticesDir ..
+```
+
+The script includes the complete Release directory, project/dependency licenses,
+and the x64 CRT DLLs from the installed Visual Studio redistributable folder.
+Default setup is per-user and does not require administrator rights.
+The delivered installer is unsigned. Exact file hashes are in SHA256SUMS.txt.

@@ -1,2 +1,4 @@
 c1913c9915e30e0e8ea7bbe8fc88d403b7b00f745bdd417c915cce93f2a8aa19  BRIZFI-0.1.0-20261023-windows-x64.zip
 fb4c6cccc0d1708c65b5b039bff666c95435378ee5a2820beaac27d04998cba4  BRIZFI-0.1.0-20261023-sources.zip
+b1294cabfa0c804edc7e0986ded58f6e64ba772ed188be036778ee540e2e14de  BRIZFI-0.1.0-windows-x64-setup.exe
+575ce287dfa478457b55159227d4d28ae70b87ab9403f1712d1f2ef06dc4fc42  BRIZFI-0.1.0-windows-installer-sources.zip
