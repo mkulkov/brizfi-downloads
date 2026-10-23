@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22.1)
+project(brizfi_usb_recovery LANGUAGES C)
+add_library(brizfi_usb_recovery SHARED usb_recovery.c)
+target_compile_options(brizfi_usb_recovery PRIVATE -Wall -Wextra -Werror)
+target_link_options(brizfi_usb_recovery PRIVATE "-Wl,-z,max-page-size=16384")

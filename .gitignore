@@ -1,0 +1,7 @@
+# Dependency source archives are provided as release assets, not Git objects.
+/rust-vendor/
+/dart-pub-cache/
+/.cargo/
+/release-notes.md
+*.zip
+*.tar

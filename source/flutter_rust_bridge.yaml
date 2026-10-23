@@ -1,0 +1,8 @@
+rust_input: crate::api
+rust_root: rust/
+dart_output: lib/src/rust
+dart_entrypoint_class_name: RustLib
+web: false
+dart_fix: false
+auto_upgrade_dependency: false
+type_64bit_int: true

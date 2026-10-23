@@ -1,0 +1,295 @@
+{
+  "intro": "Select EPUB, FB2 or AZW3 up to 32 MiB. Books are converted on the phone. Keep BRIZFI open.",
+  "stopped": "Connection stopped",
+  "waiting": "Waiting for a reader",
+  "pending": "Visitor requests access. Confirm only your reader.",
+  "allowed": "Reader access allowed",
+  "transferred": "File transferred",
+  "noBook": "Choose a DRM-free EPUB, FB2 or AZW3 book",
+  "converting": "Converting EPUB to AZW3…",
+  "convertingFb2": "Converting FB2 to AZW3…",
+  "cancelling": "Cancellation requested. Waiting for conversion to finish…",
+  "cancel": "Cancel conversion",
+  "cancelled": "Conversion cancelled. Your source book is unchanged.",
+  "retryConversion": "Retry conversion",
+  "conversionError": "Could not convert this book. It may be damaged. Retry or choose another book.",
+  "protectedBook": "Protected or encrypted books are not supported. Choose a DRM-free book.",
+  "conversionLimit": "This book exceeds conversion limits. Choose a smaller or simpler book.",
+  "unsupportedEncoding": "This text encoding is not supported. Choose a book encoded in UTF-8 or Windows-1251.",
+  "unsupportedBook": "This book contains unsupported content. Choose another EPUB or FB2.",
+  "pick": "Choose book",
+  "shareDeferred": "A new book is waiting. Wait for the current operation or stop the download page.",
+  "shareBusy": "One book is already waiting for import. Wait until it is ready, then share the next book again.",
+  "shareMultiple": "Send one book at a time. Select one EPUB, FB2 or AZW3 and share it again.",
+  "shareInvalid": "Could not receive the file. Share an EPUB, FB2 or AZW3 from a file app, or use Choose book.",
+  "clearBook": "Remove selected book",
+  "cacheFull": "There is not enough room for a temporary copy. Remove the selected book and retry. Old copies left after a crash expire automatically.",
+  "storageUnavailable": "Could not save the temporary book. Free some space on your phone and retry.",
+  "importTooLarge": "The book exceeds 32 MiB. Choose a smaller file.",
+  "importUnsupported": "Choose a DRM-free EPUB, FB2, AZW3, MOBI, PDF or TXT book. This input format is not supported.",
+  "invalidBook": "The file is empty or damaged. Choose another book.",
+  "network": "Connection setup: select your Wi-Fi address",
+  "noNetwork": "Not connected to Wi-Fi",
+  "start": "Open download page",
+  "startReason": "Choose a book and a local address to continue.",
+  "instructions": "Open the complete address from the app in the Kindle browser, including http:// and the port. Tap Connect reader, compare the three-digit code and approve on your phone. When the list appears, tap Download book or Download all books. If the list does not appear, refresh the page. Access expires after 15 minutes.",
+  "approve": "Allow this reader",
+  "bytes": "Sent to HTTP response: {count} bytes",
+  "@bytes": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "stop": "Stop and revoke access",
+  "backgroundInterrupted": "Transfer stopped when the app moved to the background. Your book is retained: open the download page again and allow the reader access.",
+  "networkInterrupted": "The network changed or is unavailable. Your book is retained: connect to the same Wi-Fi network, open the page again, and use the new address on Kindle.",
+  "error": "Could not complete the operation. Choose an EPUB, FB2 or AZW3 up to 32 MiB, check Wi-Fi, and try again.",
+  "notice": "Use a trusted network: HTTP is not encrypted. After downloading, check the book on your Kindle. Keep this app open during transfer.",
+  "wifiMode": "Wi-Fi",
+  "usbMode": "USB",
+  "usbInstructions": "Connect the device to your phone using a data/OTG cable. Connection is not restricted by brand. For USB storage and standard MTP devices, choose a destination folder in the system picker. For Kindle, allow USB access; if asked for a folder, choose Kindle → documents. For NOOK, choose its USB drive → My Files → Books → Use this folder. The folder is reused until disconnection. If Android does not mount the NOOK drive, use Wi-Fi. Some phones require enabling OTG.",
+  "usbWindowsInstructions": "Connect Kindle or NOOK to the computer with a USB data cable. Click Find USB reader, check the detected reader and choose books. BRIZFI keeps supported originals and converts other supported inputs automatically. Safely eject the reader after transfer, then check that the books open.",
+  "usbFind": "Find USB reader",
+  "usbNoReader": "No USB reader found",
+  "usbSend": "Send by USB",
+  "usbSendReason": "Prepare a book and select a connected USB reader to send.",
+  "usbConnecting": "Connecting to USB reader…",
+  "usbWriting": "Writing book to reader…",
+  "usbVerifying": "Verifying the written file…",
+  "usbCancel": "Cancel transfer",
+  "usbCancelling": "Cancellation requested. Waiting for the USB operation to finish…",
+  "usbCompleted": "File written and verified: {count} bytes, {name}. Disconnect the cable, check the Kindle library and open the book.",
+  "usbNotFound": "Reader disconnected. Check the cable and search for the USB reader again. The phone copy is retained.",
+  "usbPermission": "USB reader access was denied. Send again and accept the system permission request.",
+  "usbUnsupported": "The reader does not provide the MTP operations needed to write and verify files. Use Wi-Fi transfer.",
+  "usbOpenFailed": "Android could not open the USB connection to the reader. Reconnect the cable and try again. You can transfer the book over Wi-Fi.",
+  "usbChooseFolder": "Choose the documents folder on Kindle",
+  "usbReaderBusy": "Another app is using the USB reader. Close the file manager and try again. You can transfer the book over Wi-Fi.",
+  "usbDocumentsMissing": "The reader's book folder is unavailable. Reconnect the reader and search again.",
+  "usbFull": "Not enough free space on the reader. Free up space and try again.",
+  "usbVerificationFailed": "The written book failed verification. Check the cable and send again. The phone copy is retained.",
+  "usbTransferFailed": "Could not write the book. Check the cable, free space and reader connection, then try again.",
+  "usbCancelled": "USB transfer cancelled. The phone copy is retained.",
+  "usbUncertain": "Transfer interrupted; a new incomplete brizfi- file may remain on the reader. Check it before retrying. The source copy is retained.",
+  "usbNotice": "USB mode requires a direct phone-to-reader connection. Keep BRIZFI open until writing and verification finish. Kindle uses MTP; NOOK requires Android to mount its USB drive and a folder permission. Support depends on the phone and reader.",
+  "@usbCompleted": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "usbBusy": "A USB operation or cleanup is still running. Wait for it to finish and send again.",
+  "pairingCodeTitle": "Pairing code",
+  "pairingCodeCheck": "Compare the code with your reader",
+  "pairingCodeApproved": "Access is allowed for the reader with this code.",
+  "pairingCodeSpoken": "Pairing code: {code}",
+  "@pairingCodeSpoken": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "batchPrepared": "Books prepared: {done} of {total}",
+  "@batchPrepared": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "batchPreparing": "Preparing book {current} of {total}",
+  "@batchPreparing": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "batchBookReady": "Ready to send",
+  "batchBookWaiting": "Waiting for preparation",
+  "batchBookFailed": "Not prepared. Retry conversion or remove this book.",
+  "removeOneBook": "Remove this book",
+  "batchUsbProgress": "USB: book {current} of {total}",
+  "@batchUsbProgress": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "batchUsbVerified": "Written and verified on reader",
+  "batchUsbResult": "Books written and verified: {done} of {total}",
+  "@batchUsbResult": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "batchHttpResult": "Files transferred: {done} of {total}",
+  "@batchHttpResult": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "removeSentBooks": "Remove completed books from selection",
+  "batchLimit": "Select up to 10 books at a time. Choose fewer files.",
+  "invalidSelection": "Could not access the selected files. Select EPUB, FB2 or AZW3 again.",
+  "batchIntro": "Choose up to 10 EPUB, FB2 or AZW3 books, up to 32 MiB each. Keep BRIZFI open.",
+  "pickBooks": "Choose books",
+  "clearBooks": "Remove all selected books",
+  "bookConverting": "Converting…",
+  "bookCancelling": "Cancelling…",
+  "bookCancelled": "Cancelled",
+  "readerSubtitle": "Local book transfer",
+  "readerConnection": "Connection",
+  "readerInitialTitle": "Connect your reader",
+  "readerInitialHint": "Tap the button, then approve the connection in BRIZFI on your phone.",
+  "readerConnect": "Connect reader",
+  "readerWaitingTitle": "Compare the code",
+  "readerWaitingHint": "The same code must appear on your phone. If it matches, approve the connection in BRIZFI.",
+  "readerCodeLabel": "Your reader code",
+  "readerPendingStatus": "Waiting for approval on your phone",
+  "readerRefresh": "Refresh page",
+  "readerPause": "Stop automatic updates",
+  "readerPairExpired": "The request expired or the connection was interrupted. Refresh this page to continue.",
+  "readerPaused": "Automatic updates stopped. After approval, tap Refresh page.",
+  "readerAutoHint": "Your books will appear here after approval.",
+  "readerReadyTitle": "Ready to download",
+  "readerReadyHint": "Download the books, then open them in your Kindle library.",
+  "readerConnected": "Reader connected",
+  "readerDownloadAll": "Download all books",
+  "readerDownloadBook": "Download book",
+  "readerDownloadOne": "Download",
+  "readerBooks": "Books · {count}",
+  "@readerBooks": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "readerStarting": "Starting downloads…",
+  "readerFailed": "Queue stopped. Download books individually, or retry.",
+  "readerComplete": "Files transferred. Check the books in the Kindle library.",
+  "readerStopped": "Queue stopped. The current file may still be downloading.",
+  "readerStop": "Stop queue",
+  "readerDownloading": "Downloading book {current} of {total}…",
+  "@readerDownloading": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "readerFallback": "If the download does not start, tap Download next to a book.",
+  "readerPrivacy": "No cloud. Just your local Wi-Fi network.",
+  "aboutTitle": "About",
+  "aboutDescription": "BRIZFI transfers books locally from your phone to a reader, without registration, cloud services or internet access.",
+  "aboutWifi": "Wi-Fi: on your phone",
+  "aboutPhoneSteps": "1. Connect your phone and reader to the same Wi-Fi network.\n2. Choose books — ready files appear on the reader page automatically.\n3. Compare the code with your reader and approve the connection.",
+  "aboutReader": "On the reader",
+  "aboutFormats": "Formats and limits",
+  "aboutBatchLimits": "EPUB and FB2 are converted to AZW3 on your phone. Existing AZW3 files are transferred unchanged. Select up to 10 books, up to 32 MiB each. If storage is full, choose fewer books. DRM-protected books are not supported.",
+  "aboutSingleLimits": "EPUB and FB2 are converted to AZW3 on your phone. Existing AZW3 files are transferred unchanged. Books can be up to 32 MiB. DRM-protected books are not supported.",
+  "aboutPrivacy": "Transfer and security",
+  "aboutUsbCompletion": "When finished, safely disconnect the reader and open the books in its library. If only some books were transferred, remove completed books from the selection before retrying to avoid duplicates. This does not delete books on the reader.",
+  "selectBooksFirst": "Choose books first",
+  "selectWifiFirst": "Connect to Wi-Fi",
+  "selectUsbFirst": "Select a USB reader",
+  "transferVerified": "File transferred and verified",
+  "revokeReader": "Disconnect reader",
+  "readerNoBooks": "Choose books on your phone",
+  "readerNoBooksHint": "Ready books will appear here automatically.",
+  "wifiAddressTitle": "Enter in your reader’s browser",
+  "usbReaderTitle": "USB reader",
+  "booksTitle": "Books",
+  "journeyConnect": "Let’s connect your devices",
+  "journeyChoose": "Pack a book parcel",
+  "journeySending": "Your books are on their way",
+  "journeyDone": "Parcel delivered!",
+  "journeyConnectionStep": "Connection",
+  "journeyBooksStep": "Books",
+  "journeyTransferStep": "Transfer",
+  "journeyHowSend": "How shall we send them?",
+  "journeyContinue": "Choose books",
+  "journeyAdd": "Add books",
+  "journeySend": "Send books",
+  "journeyAgain": "Send more books",
+  "journeyEnd": "End connection",
+  "journeyHelp": "How do I connect?",
+  "journeyChange": "Change",
+  "journeyConnected": "Reader connected",
+  "journeyCompare": "Compare the code on your reader",
+  "journeyApprove": "The codes match",
+  "journeyDownload": "On your reader, tap “Download book” or “Download all books”.",
+  "journeyKeepOpen": "Keep the app open",
+  "journeyCheckLibrary": "Check the books in your reader’s library",
+  "journeyWaiting": "Waiting for the reader to download",
+  "journeyStop": "Stop",
+  "journeyBack": "Back",
+  "journeyReconnect": "Reconnect your reader",
+  "journeyEmpty": "Add books to your parcel",
+  "journeyChooseReason": "Connect your reader first",
+  "readerFormats": "Supported originals: {formats}",
+  "@readerFormats": {"placeholders": {"formats": {"type": "String"}}},
+  "readerFormatUnsupported": "This reader cannot open this format and automatic conversion is not available for it. Choose a book in one of the reader's supported formats or select a different reader.",
+  "readerOriginal": "{format} · Original, no conversion",
+  "@readerOriginal": {"placeholders": {"format": {"type": "String"}}},
+  "readerConverted": "{source} → {target}",
+  "@readerConverted": {"placeholders": {"source": {"type": "String"}, "target": {"type": "String"}}},
+  "windowsFormatsHelp": "USB readers are identified using local device profiles. Kindle accepts AZW3, unprotected MOBI, PDF and TXT; EPUB and FB2 are converted to AZW3. NOOK accepts EPUB and PDF; FB2, AZW3, unprotected MOBI and UTF-8 TXT are converted to EPUB. TXT conversion is limited to 1.33 MiB. Conversion requires a DRM-free book. Up to 10 books, 32 MiB each. Wi-Fi currently uses the Kindle AZW3 profile. Other models and formats require separate verification.",
+  "usbWindowsNotice": "USB transfer works locally. Keep BRIZFI open until writing and verification finish. Reader detection uses known device profiles; an unknown model is not assumed compatible.",
+  "wifiReaderType": "Reader type",
+  "readerOther": "Other",
+  "wifiReaderTypeHint": "Choose your reader so BRIZFI prepares the right format.",
+  "usbNookChooseFolder": "Choose My Files → Books on the NOOK USB drive",
+  "usbNookFolderMissing": "Choose My Files → Books on the NOOK USB drive. If Android does not show that drive, check OTG support or use Wi-Fi.",
+  "androidFormatsHelp": "USB identifies known Kindle and NOOK devices; choose the reader type for Wi-Fi. Supported originals are kept unchanged. Kindle: AZW3, unprotected MOBI, PDF and UTF-8 TXT; EPUB and FB2 are converted to AZW3. NOOK: EPUB/PDF; FB2, AZW3, unprotected MOBI and UTF-8 TXT are converted to EPUB. TXT conversion is limited to 1.33 MiB. Up to 10 books, 32 MiB each. DRM and unknown device profiles are not supported. Android must mount the NOOK USB drive for folder access.",
+  "adsRemove": "Remove ads · {price}",
+  "adsPurchasing": "Waiting for payment…",
+  "adsPurchaseFailed": "The purchase was not completed. Ads are still enabled.",
+  "adsPrivacy": "Android includes Yandex ads. Ads and ad removal purchases need internet; book transfers work locally. Ad and payment services process technical device and transaction data. Book contents and names are not sent to the ad network.",
+  "@adsRemove": {"placeholders": {"price": {"type": "String"}}},
+  "readerConfirmHint": "Check the detected brand or choose another.",
+  "readerSaved": "Reader choice saved",
+  "readerConfirm": "Confirm reader",
+  "readerModel": "Model: {model}",
+  "@readerModel": {
+    "placeholders": {
+      "model": {
+        "type": "String"
+      }
+    }
+  },
+  "readerUnknownFormats": "Books are sent in their original format. Whether they can be opened depends on the device.",
+  "readerSaveFailed": "Could not save the reader choice. Try confirming again.",
+  "usbNoFileProtocol": "No USB file access"
+}

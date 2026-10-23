@@ -1,0 +1,19 @@
+# Windows USB reader transport
+
+`listDevices` keeps numeric `id` and `name` and adds `profile`, `transport`, `formats` and generic `model`. PnP identities and volume serials remain native-only. NOOK is identified through the mounted volume's physical disk and a USB ancestor with VID 2080 / PID 0003, never its label or drive letter. This evidence identifies a NOOK USB eReader, not its exact retail model. An empty media LUN is ignored.
+
+Profiles:
+- Kindle / `mtp`: AZW3, unprotected MOBI, PDF, UTF-8 TXT. Amazon's [Kindle 2024 technical details](https://www.amazon.co.uk/kindle-2024/dp/B0CP31T5M6) list these native formats. EPUB/FB2 must be converted before this transport accepts them.
+- NOOK / `massStorage`: EPUB, PDF. Barnes & Noble's [USB transfer instructions](https://help.barnesandnoble.com/hc/en-us/articles/5599565083547-NOOK-GlowLight-Devices-Transferring-Files-from-Your-Computer) confirm EPUB/PDF and My Files. TXT is not advertised for this unidentified model.
+
+Both transports accept only marked managed imports, no active conversion reservation, and at most 32 MiB. They retain the actual supported extension and create a fresh UUID filename. Native format checks cover EPUB ZIP metadata (at most 4,096 entries and 128 MiB declared expanded data, no encryption metadata/path traversal), PalmDB/MOBI structure and encryption field, PDF signature/EOF and encryption marker, or valid UTF-8 text without binary controls. These are bounded format gates, not a complete ebook/PDF parser or proof that the reader can render every document. EPUB font-obfuscation encryption metadata and non-UTF-8 TXT are conservatively rejected.
+
+NOOK writes only to existing `My Files/Books` under its volume GUID path. Open root/ancestor handles reject reparse points, verify canonical volume-GUID paths and deny write/delete sharing to prevent reparse mutation or directory replacement. Managed-source reads likewise hold the import root and UUID directory without write/delete sharing and validate the actual regular-file handle against its expected canonical path. The device identity (USB ancestor, volume GUID, serial) is rechecked before creation, after the write and after verification. `CREATE_NEW` never replaces a file. Each 64 KiB write checks cancellation; output is flushed and read completely for SHA-256 comparison. No reader file is deleted, no folder is created, and no USB reset/ejection is issued. Cancellation/failure can leave the newly created UUID-named partial file.
+
+Disk work runs on the existing worker. A 120-second watchdog requests synchronous-I/O cancellation and repeats it through worker unwind. Cancellation replies wait for handles to close. Windows documents that [CancelSynchronousIo](https://learn.microsoft.com/en-us/windows/win32/api/ioapiset/nf-ioapiset-cancelsynchronousio) marks requests for cancellation; a defective kernel/device driver can delay completion. The application does not claim an absolute driver-independent cancellation deadline.
+
+Conversion reservations preserve and account existing alternate `.converted.azw3` and `.converted.epub` files, reserve one additional maximum-sized output, and apply the per-file bound to both outputs at finish. Only existing managed-import cleanup may remove the app-owned source directory.
+
+Acceptance boundary: compile, channel/validator cases, NOOK write/readback and actual reader opening must be recorded separately. A successful SHA-256 readback proves file transfer, not library indexing or opening. Original files and user books must be retained during hardware verification.
+
+Kindle discovery is restricted to the verified USB VID 1949 / PID 9981 hardware segment (with segment boundaries). Other Amazon products sharing the vendor ID are not assigned a reader profile. Exact retail models are not inferred from this USB identity.

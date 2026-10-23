@@ -1,0 +1,24 @@
+[package]
+name = "brizfi-converter-poc"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[lib]
+crate-type = ["rlib", "cdylib"]
+
+[[bin]]
+name = "brizfi-convert"
+path = "src/main.rs"
+
+[dependencies]
+boko = { git = "https://github.com/zacharydenton/boko", rev = "8f412fb1a507399bce320d591feb517467cdb5f7", default-features = false }
+thiserror = "2"
+quick-xml = "0.39"
+cssparser = "0.36"
+encoding_rs = "0.8.42"
+base64 = "0.22.1"
+zip = { version = "8.1", default-features = false, features = ["deflate-flate2"] }
+
+[dev-dependencies]
+tempfile = "3"

@@ -1,0 +1,101 @@
+# Flutter / Dart generated files and caches
+.dart_tool/
+.pub-cache/
+.pub/
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
+coverage/
+doc/api/
+*.log
+
+# Rust build output (keep Cargo.lock for application workspaces)
+target/
+
+# Android local SDK configuration, caches and generated output
+**/.gradle/
+**/.kotlin/
+**/.cxx/
+**/.externalNativeBuild/
+**/local.properties
+**/key.properties
+*.jks
+*.keystore
+*.apk
+*.aab
+
+# Apple dependencies, generated configuration and signing files
+**/Pods/
+**/.symlinks/
+**/Flutter/ephemeral/
+**/Flutter/Generated.xcconfig
+**/Flutter/flutter_export_environment.sh
+**/Flutter/App.framework/
+**/Flutter/Flutter.framework/
+**/Flutter/Flutter.podspec
+**/Flutter/.last_build_id
+**/Flutter/app.flx
+**/Flutter/app.zip
+**/Flutter/flutter_assets/
+**/Flutter/GeneratedPluginRegistrant.*
+**/Runner/GeneratedPluginRegistrant.*
+**/DerivedData/
+**/xcuserdata/
+*.xcuserstate
+*.ipa
+*.dSYM/
+*.mobileprovision
+*.p12
+*.pfx
+*.pem
+*.key
+
+# Local credentials (sanitized examples may be committed)
+.env
+.env.*
+!.env.example
+!.env.sample
+credentials.json
+secrets.json
+
+# Editor, OS and local tool files
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+.fvm/
+.codex/
+.playwright-mcp/
+
+# Managed temporary copies, personal books and local verification output
+/tmp/
+/temp/
+/books/
+/private/
+/artifacts/
+*.epub
+*.fb2
+*.azw
+*.azw3
+*.mobi
+*.kfx
+*.pdf
+# Only owned or licensed fixtures belong in these directories.
+!test/fixtures/**/*.epub
+!test/fixtures/**/*.fb2
+!test/fixtures/**/*.azw
+!test/fixtures/**/*.azw3
+!test/fixtures/**/*.mobi
+!test/fixtures/**/*.kfx
+!test/fixtures/**/*.pdf
+!integration_test/fixtures/**/*.epub
+!integration_test/fixtures/**/*.fb2
+!integration_test/fixtures/**/*.azw
+!integration_test/fixtures/**/*.azw3
+!integration_test/fixtures/**/*.mobi
+!integration_test/fixtures/**/*.kfx
+!integration_test/fixtures/**/*.pdf
+
+# pubspec.lock and Cargo.lock are intentionally tracked.

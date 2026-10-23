@@ -1,0 +1,31 @@
+name: brizfi
+description: BRIZFI local reader transfer PoC.
+publish_to: none
+version: 0.1.0+1
+environment:
+  sdk: ^3.13.5
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: 0.20.3
+  flutter_rust_bridge: 2.13.0
+  flutter_rust_bridge_hooks: 2.13.0
+  code_assets: 1.2.1
+  flutter_rustore_pay: 11.1.1
+  yandex_mobileads: 8.6.0
+dev_dependencies:
+  integration_test:
+    sdk: flutter
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+flutter:
+  generate: true
+  uses-material-design: true
+  assets:
+    - assets/illustrations/journey-0.png
+    - assets/illustrations/journey-1.png
+    - assets/illustrations/journey-2.png
+    - assets/illustrations/journey-3.png
