@@ -1,7 +1,7 @@
 # Лендинг BRIZFI
 
 Статическая страница без сборки, JavaScript, CDN, внешних шрифтов и аналитики.
-Иллюстрации скопированы из ресурсов приложения; icon.png — из локального промопакета.
+Иллюстрации скопированы из ресурсов приложения; app-icon-v3.png — актуальная иконка из assets/branding/app-icon.png.
 Локально: `python -m http.server 8765 --bind 127.0.0.1 --directory website`.
 
 Публичный сайт: https://mkulkov.github.io/brizfi-downloads/
