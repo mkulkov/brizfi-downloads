@@ -25,3 +25,6 @@ Android: https://www.rustore.ru/catalog/app/ru.mkulkov.brizfi — HTTP404 на 2
 переключение продолжает работать. Без JavaScript остаётся русская версия HTML.
 
 Основные кнопки Windows скачивают BRIZFI-0.1.0-windows-x64-setup.exe из релиза v0.1.0. Инструкция установки обновлена для RU/EN; переносимый ZIP остаётся в Releases.
+
+
+Обновление 2026-10-26: обе кнопки Windows ведут на установщик 0.1.1; обе кнопки Android — на подписанный APK 0.1.1+3 с GitHub. Русский и английский тексты обновлены.
