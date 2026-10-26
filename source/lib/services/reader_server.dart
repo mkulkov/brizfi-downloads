@@ -64,6 +64,15 @@ class ReaderServer extends ChangeNotifier {
 
   static const maxBooks = 10;
   String _languageCode = 'en';
+
+  /// Changes page text without interrupting pairing or active downloads.
+  void updateLanguage(String languageCode) {
+    _languageCode =
+        languageCode.toLowerCase().split(RegExp('[-_]')).first == 'ru'
+        ? 'ru'
+        : 'en';
+  }
+
   AppLocalizations get _pageStrings =>
       lookupAppLocalizations(Locale(_languageCode));
   static const maxFileBytes = 32 * 1024 * 1024;
@@ -204,10 +213,7 @@ class ReaderServer extends ChangeNotifier {
       throw StateError('The server is already active or unavailable.');
     }
     _starting = true;
-    _languageCode =
-        languageCode.toLowerCase().split(RegExp('[-_]')).first == 'ru'
-        ? 'ru'
-        : 'en';
+    updateLanguage(languageCode);
     _startDone = Completer<void>();
     _error = null;
     _errorCode = null;

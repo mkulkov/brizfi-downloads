@@ -989,7 +989,7 @@ abstract class AppLocalizations {
   /// No description provided for @journeyHowSend.
   ///
   /// In en, this message translates to:
-  /// **'How shall we send them?'**
+  /// **'How would you like to send your books?'**
   String get journeyHowSend;
 
   /// No description provided for @journeyContinue.
@@ -1109,7 +1109,7 @@ abstract class AppLocalizations {
   /// No description provided for @readerFormats.
   ///
   /// In en, this message translates to:
-  /// **'Supported originals: {formats}'**
+  /// **'Formats sent without conversion: {formats}'**
   String readerFormats(String formats);
 
   /// No description provided for @readerFormatUnsupported.

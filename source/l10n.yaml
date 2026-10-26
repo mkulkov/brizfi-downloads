@@ -1,3 +1,4 @@
 arb-dir: lib/l10n
+# Both app shells follow the system locale list; English is the fallback.
 template-arb-file: app_en.arb
 output-localization-file: app_localizations.dart

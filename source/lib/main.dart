@@ -294,6 +294,12 @@ class _PocScreenState extends State<PocScreen> with WidgetsBindingObserver {
   bool usbCancelling = false;
   Future<void>? usbTask;
   @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    server.updateLanguage(Localizations.localeOf(context).languageCode);
+  }
+
+  @override
   void initState() {
     super.initState();
     preferencesReady = readerPreferences.load();

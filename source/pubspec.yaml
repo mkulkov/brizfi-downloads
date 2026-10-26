@@ -1,7 +1,7 @@
 name: brizfi
 description: BRIZFI local reader transfer PoC.
 publish_to: none
-version: 0.1.0+1
+version: 0.1.1+3
 environment:
   sdk: ^3.13.5
 dependencies:
@@ -25,6 +25,7 @@ flutter:
   generate: true
   uses-material-design: true
   assets:
+    - assets/branding/app-icon.png
     - assets/illustrations/journey-0.png
     - assets/illustrations/journey-1.png
     - assets/illustrations/journey-2.png

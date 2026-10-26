@@ -1,4 +1,4 @@
-c1913c9915e30e0e8ea7bbe8fc88d403b7b00f745bdd417c915cce93f2a8aa19  BRIZFI-0.1.0-20261023-windows-x64.zip
-fb4c6cccc0d1708c65b5b039bff666c95435378ee5a2820beaac27d04998cba4  BRIZFI-0.1.0-20261023-sources.zip
-b1294cabfa0c804edc7e0986ded58f6e64ba772ed188be036778ee540e2e14de  BRIZFI-0.1.0-windows-x64-setup.exe
-575ce287dfa478457b55159227d4d28ae70b87ab9403f1712d1f2ef06dc4fc42  BRIZFI-0.1.0-windows-installer-sources.zip
+4ae71c4b92f5998bedf8c00ce698470a9a6e31ae693cf7112bd63fd85dd00fc5  BRIZFI-0.1.1-3-android.apk
+8cfc40f6a22e93f35f5744466e3e50e34abc835c7bc57ffc3a510d3ccf050c7c  BRIZFI-0.1.1-sources.zip
+b5daa03d190b11a3447085d2c5c29692cf0e5fa4a3928473fa7ce9958edbf86c  BRIZFI-0.1.1-windows-x64-setup.exe
+a313cf49391cd7451e3fcda1731fa2fd22632a2ca9b4db243164f8807decfce6  BRIZFI-0.1.1-windows-x64.zip

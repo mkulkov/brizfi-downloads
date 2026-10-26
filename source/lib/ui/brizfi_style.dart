@@ -275,10 +275,11 @@ class BrizfiBrand extends StatelessWidget {
       return Semantics(
         label: 'BRIZFI',
         child: ExcludeSemantics(
-          child: Icon(
-            Icons.menu_book_rounded,
-            size: 32,
-            color: colors.secondary,
+          child: Image.asset(
+            'assets/branding/app-icon.png',
+            width: 32,
+            height: 32,
+            cacheWidth: 128,
           ),
         ),
       );
@@ -287,10 +288,11 @@ class BrizfiBrand extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         ExcludeSemantics(
-          child: Icon(
-            Icons.menu_book_rounded,
-            size: 28,
-            color: colors.secondary,
+          child: Image.asset(
+            'assets/branding/app-icon.png',
+            width: 28,
+            height: 28,
+            cacheWidth: 128,
           ),
         ),
         const SizedBox(width: 10),

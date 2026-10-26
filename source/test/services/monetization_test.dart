@@ -90,6 +90,24 @@ class FakePurchases implements PurchaseGateway {
 
 void main() {
   test(
+    'ads work without a purchase provider in the Google Play variant',
+    () async {
+      final sdk = FakeAds();
+      final ads = Monetization(ads: sdk);
+      await ads.initialize();
+      expect(ads.ready, isTrue);
+      expect(ads.hasAds, isTrue);
+      expect(ads.price, isNull);
+      expect(ads.canRemove, isFalse);
+      expect(await ads.removeAds(), isFalse);
+      final parcel = Object();
+      await ads.completed(parcel, canShow: () => true);
+      expect(sdk.shows, 1);
+      ads.dispose();
+    },
+  );
+
+  test(
     'initialization is idempotent and teardown cannot reverse paid entitlement',
     () async {
       final sdk = FakeAds()..failStop = true;

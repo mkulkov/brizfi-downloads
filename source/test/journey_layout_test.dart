@@ -50,7 +50,14 @@ void main() {
         await tester.pumpAndSettle();
         final illustration = tester.getRect(find.byType(JourneyIllustration));
         expect(
-          tester.getSize(find.byType(Image).first).height,
+          tester
+              .getSize(
+                find.descendant(
+                  of: find.byType(JourneyIllustration),
+                  matching: find.byType(Image),
+                ),
+              )
+              .height,
           140,
           reason: 'Artwork keeps its size even on a short screen',
         );

@@ -1,4 +1,5 @@
 import java.util.Base64
+import java.util.Properties
 
 plugins {
     id("com.android.application")
@@ -19,6 +20,11 @@ val brizfiPayEnabled = brizfiStoreId.isNotEmpty() &&
     brizfiDefines["BRIZFI_ADS"] != "false"
 require(brizfiStoreId.isEmpty() || brizfiStoreId.matches(Regex("[0-9]+"))) {
     "BRIZFI_RUSTORE_APP_ID must be the numeric console application ID"
+}
+val releaseSigning = Properties()
+val releaseSigningFile = rootProject.file("key.properties")
+if (releaseSigningFile.isFile) {
+    releaseSigningFile.inputStream().use { releaseSigning.load(it) }
 }
 
 android {
@@ -59,6 +65,18 @@ android {
         manifestPlaceholders["brizfiPayEnabled"] = brizfiPayEnabled.toString()
     }
 
+    signingConfigs {
+        create("release") {
+            // Local, ignored credentials; missing configuration fails release signing.
+            if (releaseSigningFile.isFile) {
+                storeFile = file(requireNotNull(releaseSigning.getProperty("storeFile")))
+                storePassword = requireNotNull(releaseSigning.getProperty("storePassword"))
+                keyAlias = requireNotNull(releaseSigning.getProperty("keyAlias"))
+                keyPassword = requireNotNull(releaseSigning.getProperty("keyPassword"))
+            }
+        }
+    }
+
     buildTypes {
         debug {
             // Opt-in isolated emulator/device tests cannot replace the user's app.
@@ -76,9 +94,7 @@ android {
             }
         }
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.getByName("release")
         }
     }
 }

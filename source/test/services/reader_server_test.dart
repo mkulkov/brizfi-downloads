@@ -653,6 +653,22 @@ void main() {
     },
   );
 
+  test('Page language can change without losing reader pairing', () async {
+    final cookie = await pair();
+    final address = server.url;
+    for (final language in ['ru-RU', 'en-GB', 'de']) {
+      server.updateLanguage(language);
+      final page = await request('/', cookie: cookie);
+      expect(page.status, HttpStatus.ok);
+      expect(
+        page.text,
+        contains(language == 'ru-RU' ? 'Скачать книгу' : 'Download book'),
+      );
+      expect(server.url, address);
+      expect(server.paired, isTrue);
+    }
+  });
+
   test(
     'localized batch messages use phone locale and fallback to English',
     () async {

@@ -532,7 +532,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get journeyTransferStep => 'Transfer';
 
   @override
-  String get journeyHowSend => 'How shall we send them?';
+  String get journeyHowSend => 'How would you like to send your books?';
 
   @override
   String get journeyContinue => 'Choose books';
@@ -594,7 +594,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String readerFormats(String formats) {
-    return 'Supported originals: $formats';
+    return 'Formats sent without conversion: $formats';
   }
 
   @override
