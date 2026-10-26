@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /brizfi-downloads/
+
+Sitemap: https://mkulkov.github.io/brizfi-downloads/sitemap.xml
